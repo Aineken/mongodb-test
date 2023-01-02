@@ -1,13 +1,10 @@
-import express from "express";
 import mongoose from "mongoose";
 import postMessage from "../models/postMessage.js";
-
-const router = express.Router();
 
 export const getPost = async (req, res) => {
   try {
     const postMessages = await postMessage.find();
-    // console.log(postMessages);
+
     res.status(200).json(postMessages);
   } catch (error) {
     res.stutus(404).json({ message: error.message });
@@ -74,5 +71,3 @@ export const updatePost = async (req, res) => {
 
   res.json(postBack);
 };
-
-export default router;

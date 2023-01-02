@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 5005;
-const CONNECTION_URL = process.env.CONNECTION_URL;
+const CONNECTION_URL = process.env.CONNECTION_URL; //your URL to mongoServer
 
 mongoose
   .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
