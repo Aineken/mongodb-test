@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import postRoutes from "./routes/posts.js";
 import dotenv from "dotenv";
+import Serverless from "serverless-http";
 
 const app = express();
 dotenv.config();
@@ -27,3 +28,5 @@ mongoose
     app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))
   )
   .catch((error) => console.log(error.message));
+
+module.exports.handler = Serverless(app);
