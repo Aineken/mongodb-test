@@ -15,7 +15,7 @@ app.use(cors());
 app.use("/posts", postRoutes);
 app.use("/.netlify/functions/posts", postRoutes);
 
-app.get("/a", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Welcome to Memories API");
 });
 
