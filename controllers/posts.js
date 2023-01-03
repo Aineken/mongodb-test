@@ -7,6 +7,7 @@ export const getPost = async (req, res) => {
 
     res.status(200).json(postMessages);
   } catch (error) {
+    console.log("hz no tut problema");
     res.stutus(404).json({ message: error.message });
   }
 };
